@@ -85,6 +85,10 @@
 # 5. Visit https://yourusername.github.io/repo
 
 ---
+
+
+
+
 <div align="center">
 
 <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif" width="700" alt="MK Anime Banner">
