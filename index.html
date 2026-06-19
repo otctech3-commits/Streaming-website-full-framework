@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>𝙈𝙆 BOTS - Anime Streaming</title>
+  <meta name="description" content="Watch anime online free - 𝙈𝙆 BOTS">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-robot"></i></span>
+            <span class="logo-text">𝙈𝙆<span>ANIME</span></span>
+          </div>
+          <div class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#movies" class="nav-link">Movies</a>
+            <a href="#series" class="nav-link">TV Series</a>
+            <a href="#trending" class="nav-link">Trending</a>
+          </div>
+          <div class="nav-actions">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="searchInput" placeholder="Search anime...">
+            </div>
+            <button class="btn-theme" id="themeToggle">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </div>
+          <button class="mobile-menu" id="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge">TRENDING NOW</span>
+          <h1 class="hero-title" id="heroTitle">Jujutsu Kaisen 0</h1>
+          <div class="hero-meta">
+            <span><i class="fa-solid fa-star"></i> 8.9</span>
+            <span><i class="fa-solid fa-calendar"></i> 2021</span>
+            <span><i class="fa-solid fa-clock"></i> 1h 45m</span>
+            <span class="badge">HD</span>
+          </div>
+          <p class="hero-desc" id="heroDesc">
+            Yuta Okkotsu, a high school student who gains control of an extremely powerful Cursed Spirit and gets enrolled in the Tokyo Prefectural Jujutsu High School.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-play" id="heroPlay">
+              <i class="fa-solid fa-play"></i> Watch Now
+            </button>
+            <button class="btn-info">
+              <i class="fa-solid fa-circle-info"></i> More Info
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <div class="container">
+        <div class="filter-wrapper">
+          <div class="filter-group">
+            <label>Genre</label>
+            <select id="genreFilter">
+              <option value="all">All Genres</option>
+              <option value="action">Action</option>
+              <option value="adventure">Adventure</option>
+              <option value="comedy">Comedy</option>
+              <option value="drama">Drama</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="romance">Romance</option>
+              <option value="sci-fi">Sci-Fi</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Year</label>
+            <select id="yearFilter">
+              <option value="all">All Years</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Type</label>
+            <select id="typeFilter">
+              <option value="all">All Types</option>
+              <option value="movie">Movies</option>
+              <option value="tv">TV Series</option>
+              <option value="ova">OVA</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Sort</label>
+            <select id="sortFilter">
+              <option value="latest">Latest</option>
+              <option value="rating">Top Rated</option>
+              <option value="popular">Most Popular</option>
+              <option value="name">A-Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Movies Grid -->
+    <section class="movies" id="movies">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span>Latest</span> Releases
+          </h2>
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="grid">
+              <i class="fa-solid fa-grip"></i>
+            </button>
+            <button class="view-btn" data-view="list">
+              <i class="fa-solid fa-list"></i>
+            </button>
+          </div>
+        </div>
+        <div class="movies-grid" id="moviesGrid">
+          <!-- Loaded by JS -->
+        </div>
+        <div class="load-more">
+          <button class="btn-load" id="loadMore">
+            <i class="fa-solid fa-plus"></i> Load More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <span class="logo-icon"><i class="fa-solid fa-robot"></i></span>
+              <span class="logo-text">𝙈𝙆<span>ANIME</span></span>
+            </div>
+            <p>Stream anime free. Built with passion by 𝙈𝙆 BOTS.</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-discord"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4>Browse</h4>
+              <a href="#">Movies</a>
+              <a href="#">TV Series</a>
+              <a href="#">Trending</a>
+              <a href="#">Top Rated</a>
+            </div>
+            <div class="footer-col">
+              <h4>Genre</h4>
+              <a href="#">Action</a>
+              <a href="#">Romance</a>
+              <a href="#">Comedy</a>
+              <a href="#">Fantasy</a>
+            </div>
+            <div class="footer-col">
+              <h4>Help</h4>
+              <a href="#">FAQ</a>
+              <a href="#">Contact</a>
+              <a href="#">DMCA</a>
+              <a href="#">Privacy</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 𝙈𝙆 BOTS. All rights reserved. This site does not store any files on its server.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Video Player Modal -->
+    <div class="modal" id="playerModal">
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="modal-content player-content">
+        <button class="modal-close" id="closePlayer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="player-wrapper">
+          <div class="video-container">
+            <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="player-info">
+            <div class="player-header">
+              <h3 id="playerTitle">Anime Title</h3>
+              <div class="player-meta">
+                <span id="playerRating"><i class="fa-solid fa-star"></i> 8.9</span>
+                <span id="playerYear">2021</span>
+                <span id="playerDuration">1h 45m</span>
+                <span class="badge">HD</span>
+              </div>
+            </div>
+            <p class="player-desc" id="playerDesc">Description here...</p>
+            <div class="player-actions">
+              <button class="btn-action">
+                <i class="fa-solid fa-heart"></i> Add to List
+              </button>
+              <button class="btn-action">
+                <i class="fa-solid fa-share"></i> Share
+              </button>
+              <button class="btn-action">
+                <i class="fa-solid fa-download"></i> Download
+              </button>
+            </div>
+            <div class="episode-list" id="episodeList">
+              <h4>Episodes</h4>
+              <div class="episodes" id="episodes">
+                <!-- Loaded by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
